@@ -78,12 +78,12 @@ function removeVideo(peerId){
 }
 
 function setupMakeCallUI(){
-    //$('#make-call').show();
+    $('#make-call').show();
     //$('#end-call').hide();
 }
 
 function setupEndCallUI() {
     //$('#make-call').hide();
-    //$('#end-call').show();
+    $('#end-call').show();
 }
 	
