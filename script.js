@@ -35,7 +35,7 @@ peer.on('disconnected', function(){
 });
 
 $('#make-call').submit(function(e){
-    //e.preventDefault();
+    e.preventDefault();
     const call = peer.call($('#callto-id').val(), localStream);
     setupCallEventHandlers(call);
 });
@@ -58,12 +58,12 @@ function setupCallEventHandlers(call){
 
     call.on('stream', function(stream){
         addVideo(call,stream);
-        setupEndCallUI();
+        //setupEndCallUI();
         $('#their-id').text(call.remoteId);
     });
     call.on('close', function(){
         removeVideo(call.remoteId);
-        setupMakeCallUI();
+        //setupMakeCallUI();
     });
     
     
