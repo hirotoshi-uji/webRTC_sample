@@ -35,7 +35,7 @@ peer.on('disconnected', function(){
 });
 
 $('#make-call').submit(function(e){
-    e.preventDefault();
+    //e.preventDefault();
     const call = peer.call($('#callto-id').val(), localStream);
     setupCallEventHandlers(call);
 });
@@ -65,6 +65,8 @@ function setupCallEventHandlers(call){
         removeVideo(call.remoteId);
         setupMakeCallUI();
     });
+    
+    
 }
 
 function addVideo(call,stream){
