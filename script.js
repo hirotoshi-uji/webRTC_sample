@@ -63,7 +63,7 @@ function setupCallEventHandlers(call){
     });
     call.on('close', function(){
         removeVideo(call.remoteId);
-        //setupMakeCallUI();
+        setupMakeCallUI();
     });
     
     
