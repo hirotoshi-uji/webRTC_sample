@@ -51,7 +51,7 @@ peer.on('call', function(call){
 
 function setupCallEventHandlers(call){
     if (existingCall) {
-        existingCall.close();
+        //existingCall.close();
     };
 
     existingCall = call;
