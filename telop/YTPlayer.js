@@ -8,7 +8,7 @@ function onYouTubeIframeAPIReady(){
 		'sample' ,
 		{
 			width : 100%
-			videoId : 'WuakCHtbVU'
+			videoId : 'hxSg2Ioz3LM'
 			
 			events: {
                'onReady': onPlayerReady, // プレーヤーの準備ができたときに実行
