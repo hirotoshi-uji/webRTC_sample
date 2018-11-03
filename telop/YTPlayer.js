@@ -8,19 +8,31 @@ function onYouTubeIframeAPIReady(){
 		'sample' ,
 		{
 			width : 100%
-			videoId : 'WuakCHtbVU'
+			videoId : 'hxSg2Ioz3LM'
 			
 			events: {
                'onReady': onPlayerReady, // プレーヤーの準備ができたときに実行
                 'onStateChange': onPlayerStateChange // プレーヤーの状態が変更されたときに実行
            }
+           
+           events: {
+               'onReady': onPlayerReady // プレーヤーの準備ができたときに実行
+         }
 		}
 	);
 }
 
+var playerReady = false;
+// プレーヤーの準備ができたとき
+function onPlayerReady(event) {
+  playerReady = true;
+}
+
 $(function() {
 	$('#start').click(function() {
+	    if(playerReady){
 		ytPlayer.playVideo();
+		}
 	});
 });
 
@@ -58,8 +70,4 @@ function onPlayerStateChange(event) {
  }
 }
 
-var playerReady = false;
-// プレーヤーの準備ができたとき
-function onPlayerReady(event) {
-  playerReady = true;
-}
+
