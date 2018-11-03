@@ -29,17 +29,18 @@
     var wordIndex;
     var startTime; // プレイ開始時間
     var timerId;
+    const delayTime = 900 ;
     function tick() {
         var elapsed = Date.now() - startTime; // MEMO: player.getCurrentTime() は精度が低いので使えない
-        if (elapsed < (words[0].offset+90)) {
+        if (elapsed < (words[0].offset+delayTime)) {
             return;
         }
         var lineEnd = true;
         for (var i = wordIndex; i < words.length - 1; i++) {
-            if ((words[i].offset+90) <= elapsed && elapsed < (words[i + 1].offset+90)) {
+            if ((words[i].offset+delayTime) <= elapsed && elapsed < (words[i + 1].offset+delayTime)) {
                 wordIndex = i;
                 var d1 = words[i + 1].offset - words[i].offset;
-                var d2 = elapsed - (words[i].offset+90);
+                var d2 = elapsed - (words[i].offset+delayTime);
                 var progress = Math.ceil(progressWidth + d2 / d1 * widths[i]);
                 var g = 'linear-gradient(to right, ' + foreground + ' 0, ' + foreground + ' ' + progress + 'px, ' + background + ' ' + progress + 'px, ' + background + ' 100%)';
                 $('.current').css('background', g).css('-webkit-background-clip', 'text');
