@@ -50,9 +50,9 @@ peer.on('call', function(call){
 });
 
 function setupCallEventHandlers(call){
-    if (existingCall) {
-        existingCall.close();
-    };
+    //if (existingCall) {
+    //    existingCall.close();
+    //};
 
     existingCall = call;
 
@@ -65,8 +65,8 @@ function setupCallEventHandlers(call){
         removeVideo(call.remoteId);
         setupMakeCallUI();
     });
-    
-    
+
+
 }
 
 function addVideo(call,stream){
@@ -86,4 +86,3 @@ function setupEndCallUI() {
     $('#make-call').hide();
     $('#end-call').show();
 }
-	
