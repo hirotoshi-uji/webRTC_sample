@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+
+inframe_room_video.html
+
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="//cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+		<script type="text/javascript" src="../key.js"></script>
+		<script type="text/javascript" src="script 2.js"></script>
+		<link rel="stylesheet" href="style 2.css">
+    </head>
+
+    <body>
+    <div class="pure-u-2-3" id="video-container">
+	    <div id="their-videos"></div>
+	    <div>
+	    	<label id="my-label"></label>
+	    	<video id="my-video" muted="true" autoplay playsinline></video>
+	    </div>
+    </div>
+
+	<div class="select">
+		<label for="audioSource">Audio input source: </label><select id="audioSource"></select>
+	</div>
+
+	<div class="select">
+		<label for="videoSource">Video source: </label><select id="videoSource"></select>
+	</div>
+    </body>
+</html>

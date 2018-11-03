@@ -6,9 +6,11 @@ let existingCall = null;
 
 navigator.mediaDevices.getUserMedia({video: true, audio: true})
     .then(function (stream) {
+        // Success
         $('#my-video').get(0).srcObject = stream;
         localStream = stream;
     }).catch(function (error) {
+    // Error
     console.error('mediaDevice.getUserMedia() error:', error);
     return;
 });
@@ -32,8 +34,8 @@ peer.on('close', function(){
 peer.on('disconnected', function(){
 });
 
-$('#make-call').submit(function(e){
-    e.preventDefault();
+$('#make-call').submit(function(event){
+    event.preventDefault();
     const call = peer.call($('#callto-id').val(), localStream);
     setupCallEventHandlers(call);
 });
@@ -56,7 +58,7 @@ function setupCallEventHandlers(call){
 
     call.on('stream', function(stream){
         addVideo(call,stream);
-        setupEndCallUI();
+        //setupEndCallUI();
         $('#their-id').text(call.remoteId);
     });
     call.on('close', function(){
@@ -77,10 +79,10 @@ function removeVideo(peerId){
 
 function setupMakeCallUI(){
     $('#make-call').show();
-    // $('#end-call').hide();
+    $('#end-call').hide();
 }
 
 function setupEndCallUI() {
-    // $('#make-call').hide();
+    $('#make-call').hide();
     $('#end-call').show();
 }
