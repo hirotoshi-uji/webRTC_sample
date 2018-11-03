@@ -95,8 +95,7 @@ $(function() {
       audio: {deviceId: audioSource ? {exact: audioSource} : undefined},
       video: {deviceId: videoSource ? {exact: videoSource} : undefined},
     };
-    console.log("audio: " + audioSoure);
-    console.log("video: " + videoSource);
+    console.log("audio&video: exist?");
 
     navigator.mediaDevices.getUserMedia(constraints).then(stream => {
       $('#my-video').get(0).srcObject = stream;
