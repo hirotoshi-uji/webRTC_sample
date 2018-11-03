@@ -16,6 +16,6 @@
           $playerWindow.postMessage('{"event":"command","func":"'+action+'","args":""}', '*');
       }
   };
-  var closeBtnClick = new CloseTrigger('#start');
+  var closeBtnClick = new CloseTrigger('.start');
  
 })();
