@@ -29,7 +29,7 @@
     var wordIndex;
     var startTime; // プレイ開始時間
     var timerId;
-    const delayTime = -220;
+    const delayTime = -420;
     function tick() {
         var elapsed = Date.now() - startTime; // MEMO: player.getCurrentTime() は精度が低いので使えない
         if (elapsed < (words[0].offset+delayTime)) {
