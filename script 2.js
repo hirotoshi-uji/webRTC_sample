@@ -8,6 +8,7 @@ $(function() {
   let localStream;
   let room;
   peer.on('open', () => {
+    console.log("my id: " + peer.id);
     //------------------------------------$('#my-id').text(peer.id);
     // Get things started
     step1();
@@ -94,6 +95,8 @@ $(function() {
       audio: {deviceId: audioSource ? {exact: audioSource} : undefined},
       video: {deviceId: videoSource ? {exact: videoSource} : undefined},
     };
+    console.log("audio: " + audioSoure);
+    console.log("video: " + videoSource);
 
     navigator.mediaDevices.getUserMedia(constraints).then(stream => {
       $('#my-video').get(0).srcObject = stream;
