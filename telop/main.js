@@ -69,7 +69,7 @@
             });
         }
     }
-    $('#ytp-large-play-button ytp-button').click(function () {
+    $('#start').click(function () {
         // reset
         lineIndex = 0;
         progressWidth = 0.0;
