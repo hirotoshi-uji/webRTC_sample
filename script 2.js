@@ -1,7 +1,7 @@
 $(function() {
   // Peer object
   const peer = new Peer({
-    key: '3f8bc27b-ef1e-404c-b949-7bdfe89b9eb1',
+    key: '66d446fa-f87d-48fc-a0bb-ce28aa74b244',
     debug: 3,
   });
 
