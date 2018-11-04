@@ -140,10 +140,6 @@ $(function() {
       $('#video_' + peerId + '_' + stream.id.replace('{', '').replace('}', '')).remove();
     });
 
-    room.on('data', data => {
-        sound();
-    });
-
     // UI stuff
     room.on('close', step2);
     room.on('peerLeave', peerId => {
@@ -154,14 +150,6 @@ $(function() {
   }
 });
 
-
-$(function(){
-    const c='clickedTheButton';
-    $('#sound').on('click', ()=>{
-        room.send('c');
-        sound();
-    })
-}
 
 function sound(){
 	$('#sound').load();
