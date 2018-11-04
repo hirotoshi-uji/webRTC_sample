@@ -140,6 +140,15 @@ $(function() {
       $('#video_' + peerId + '_' + stream.id.replace('{', '').replace('}', '')).remove();
     });
 
+    room.on('data', data => {
+        sound();
+    });
+
+    $('#sound').on('click', ()=>{
+        room.send('1');
+        sound();
+    })
+
     // UI stuff
     room.on('close', step2);
     room.on('peerLeave', peerId => {
