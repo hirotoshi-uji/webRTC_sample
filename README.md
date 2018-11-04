@@ -1,4 +1,4 @@
 # Iecara
 real-time tele-karaoke service.
 
-use Node.js, WebRTC, HTML5, CSS. 
+use JavaScript(jQuery), WebRTC(SkyWay), HTML5, CSS. 

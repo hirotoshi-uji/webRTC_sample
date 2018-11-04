@@ -10,9 +10,9 @@ page_Senbonzakura.html
         <title>singing</title>
         <script type = "text/javascript" src = "sound.js"></script>
         <style>
-        		body {
-			font-family: Meiryo;
-		}
+        	body {
+			    font-family: Meiryo;
+		    }
 
 		h1 {
 			font-size: 22px;
@@ -46,29 +46,29 @@ page_Senbonzakura.html
 		</style>
 </head>
 <body>
-    
+
     <!-- youtube -->
     <center>
     <div >
     	<iframe class="video" id = 'popup-YouTube-player' src="https://www.youtube.com/embed/1WuakCHtbVU?modestbranding=1&rel=0&controls=0&autohide=0&showinfo=0&enablejsapi=1" width = "100%" ></iframe>
     </div>
     </center>
-    
+
     <!-- tambarin -->
     <audio id = "sound" preload = "auto">
     	<source src = "./audio/TamFertig.mp3" type = "audio/mp3">
     	<source src = "./audio/TamFertig.wav" type = "audio/wav">
     </audio>
-    
+
     <div align = "center">
     	<button type = "button" onClick="sound()" >
     		<img src = "./img/Tambourine.jpg" height = "50px" width = "50px">
     	</button>
     </div>
-    
+
     <br><br>
-    
-    <!-- lyrics --> 
+
+    <!-- lyrics -->
     <div class="container">
 
 		<div hidden style="margin:0 0 10px;">
@@ -84,15 +84,15 @@ page_Senbonzakura.html
 		</center>
 		<br>
 		<div data-bind="foreach: lyrics">
-		
+
 			<div class="line">
 				<div class="shadow" data-bind="foreach: words"><span data-bind="text: text"></span></div>
 				<div class="telop" data-bind="foreach: words"><span data-bind="text: text"></span></div>
-				
+
 			</div> <!-- /div line -->
 		</div> <!-- /div foreach:lyrics -->
 	</div> <!-- /div container -->
-	
+
 	<div style="display:none;">
 		<textarea>
 			[00:00:00]　[00:00:01]
@@ -134,13 +134,13 @@ page_Senbonzakura.html
 			[03:26:39]此[03:26:63]処[03:26:81]は[03:27:15]宴[03:27:64]　[03:28:15]鋼[03:28:68]の[03:28:86]檻[03:29:16]　[03:29:47]さ[03:29:65]あ[03:29:83]光[03:30:30]線[03:30:68]銃[03:31:18]を[03:31:55]撃[03:31:71]ち[03:31:89]ま[03:32:06]く[03:32:26]れ[03:33:06]
 		</textarea>
 	</div>
-	
+
 	<center>
     <button type="button" name="music" style = "width:75%">
 	    <font size="5"  color="#333399" onClick = 'location.href= "iframe_room_button.html"'  >　楽曲選択画面　</font>
     </button>
     </center>
-	
+
     <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 	<script src="//ajax.aspnetcdn.com/ajax/knockout/knockout-3.0.0.js"></script>
 	<script src="telop/mediaelement-and-player.min.js"></script>
