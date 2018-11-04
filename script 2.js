@@ -152,6 +152,6 @@ $(function() {
 
 
 function sound(){
-	$('#sound').load();
-	$('#sound').play();
+    document.getElementById( 'sound' ).load() ;
+	document.getElementById( 'sound' ).play() ;
 }
