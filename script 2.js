@@ -149,3 +149,9 @@ $(function() {
     $('#step3').show();
   }
 });
+
+
+function sound(){
+	$('#sound').load();
+	$('#sound').play();
+}
