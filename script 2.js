@@ -144,11 +144,6 @@ $(function() {
         sound();
     });
 
-    $('#sound').on('click', ()=>{
-        room.send('1');
-        sound();
-    })
-
     // UI stuff
     room.on('close', step2);
     room.on('peerLeave', peerId => {
@@ -159,6 +154,14 @@ $(function() {
   }
 });
 
+
+$(function(){
+    const c='clickedTheButton';
+    $('#sound').on('click', ()=>{
+        room.send('c');
+        sound();
+    })
+}
 
 function sound(){
 	$('#sound').load();
